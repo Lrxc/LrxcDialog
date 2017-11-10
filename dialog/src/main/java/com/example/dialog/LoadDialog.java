@@ -51,4 +51,9 @@ public class LoadDialog {
     public void show() {
         dialog.show();
     }
+
+    //设置隐藏
+    public void dismiss() {
+        dialog.dismiss();
+    }
 }
