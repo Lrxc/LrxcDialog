@@ -33,6 +33,8 @@ public class LoadDialog {
         dialog.setContentView(view);
         //背景透明
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        //默认点击空白处不消失
+        dialog.setCanceledOnTouchOutside(false);
     }
 
     //设置加载信息
@@ -41,9 +43,15 @@ public class LoadDialog {
         return loadDialog;
     }
 
-    //设置空白是否可取消
+    //设置空白处是否可取消
     public LoadDialog setCanceledOnTouchOutside(boolean cancel) {
         dialog.setCanceledOnTouchOutside(cancel);
+        return loadDialog;
+    }
+
+    //设置是否可取消
+    public LoadDialog setCancelable(boolean cancel) {
+        dialog.setCancelable(cancel);
         return loadDialog;
     }
 
