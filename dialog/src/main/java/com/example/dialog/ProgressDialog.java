@@ -65,6 +65,17 @@ public class ProgressDialog extends Dialog implements View.OnClickListener {
     }
 
     /**
+     * 设置进度最大值
+     *
+     * @param max
+     * @return
+     */
+    public ProgressDialog setMax(int max) {
+        progressBar.setMax(max);
+        return this;
+    }
+
+    /**
      * 设置加载进度
      *
      * @param progress
