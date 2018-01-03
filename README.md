@@ -19,4 +19,9 @@ Step 1.  Add it in your root build.gradle at the end of repositories:
 	dependencies {
 	        compile 'com.github.Lrxc:lrxcdialog:1.2'
 	}
-```
+``` 
+  Step 3. User in Activity
+  ```
+  	LoadDialog(this).setText("请求中").show()
+  ```
+	
