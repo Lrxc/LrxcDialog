@@ -25,7 +25,7 @@ public class LoadDialog extends Dialog {
     //初始化
     private void initView(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_load, null);
-        msg = view.findViewById(R.id.dialog_load_msg);
+        msg = (TextView) view.findViewById(R.id.dialog_load_msg);
 
         //Android5.0以下去掉标题线(必须setContentView之前)
         requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);

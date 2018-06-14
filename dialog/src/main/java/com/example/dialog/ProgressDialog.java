@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -28,10 +27,10 @@ public class ProgressDialog extends Dialog implements View.OnClickListener {
     //显示进度条
     private void initView(Context context) {
         View view = View.inflate(context, R.layout.dialog_progress, null);
-        progressBar = view.findViewById(R.id.progressBar);
-        title = view.findViewById(R.id.title);
-        tv = view.findViewById(R.id.tv);
-        btn = view.findViewById(R.id.btn);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        title = (TextView) view.findViewById(R.id.title);
+        tv = (TextView) view.findViewById(R.id.tv);
+        btn = (TextView) view.findViewById(R.id.btn);
         btn.setOnClickListener(this);
 
         //去掉标题线
