@@ -82,17 +82,7 @@ public class ProgressDialog extends Dialog implements View.OnClickListener {
      */
     public ProgressDialog setProgress(int progress) {
         progressBar.setProgress(progress);
-        return this;
-    }
-
-    /**
-     * 设置加载进度信息
-     *
-     * @param text 10/100
-     * @return
-     */
-    public ProgressDialog setText(String text) {
-        tv.setText(text);
+        tv.setText(progress + "/" + progressBar.getMax());
         return this;
     }
 
