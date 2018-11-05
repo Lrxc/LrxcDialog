@@ -55,11 +55,19 @@ public class LoadDialog extends Dialog {
      * @param text 右下角按钮
      * @return
      */
-    public LoadDialog setButton(String text) {
+    public LoadDialog setButton(String text, final OnClickBtnListener onClickListener) {
         btn.setVisibility(View.VISIBLE);
         btn.setText(text);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickListener.onClick(v);
+                dismiss();
+            }
+        });
         return this;
     }
+
 
     /**
      * 设置空白处是否可取消
