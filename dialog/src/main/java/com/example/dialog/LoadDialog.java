@@ -15,7 +15,7 @@ import android.widget.TextView;
  */
 
 public class LoadDialog extends Dialog {
-    private TextView msg;
+    private TextView msg, btn;
 
     public LoadDialog(@NonNull Context context) {
         super(context);
@@ -26,6 +26,7 @@ public class LoadDialog extends Dialog {
     private void initView(Context context) {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_load, null);
         msg = (TextView) view.findViewById(R.id.dialog_load_msg);
+        btn = (TextView) view.findViewById(R.id.dialog_load_btn);
 
         //Android5.0以下去掉标题线(必须setContentView之前)
         requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
@@ -45,6 +46,18 @@ public class LoadDialog extends Dialog {
      */
     public LoadDialog setText(String text) {
         msg.setText(text);
+        return this;
+    }
+
+    /**
+     * 设置加载信息
+     *
+     * @param text 右下角按钮
+     * @return
+     */
+    public LoadDialog setButton(String text) {
+        btn.setVisibility(View.VISIBLE);
+        btn.setText(text);
         return this;
     }
 
