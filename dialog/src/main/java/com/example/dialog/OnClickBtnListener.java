@@ -1,5 +1,6 @@
 package com.example.dialog;
 
+import android.app.Dialog;
 import android.view.View;
 
 /**
@@ -7,5 +8,5 @@ import android.view.View;
  * Email: Lrxc1117@163.com
  */
 public interface OnClickBtnListener {
-    void onClick(View v);
+    void onClick(Dialog dialog, View v);
 }

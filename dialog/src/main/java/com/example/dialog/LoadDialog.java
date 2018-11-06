@@ -61,7 +61,7 @@ public class LoadDialog extends Dialog {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickListener.onClick(v);
+                onClickListener.onClick(LoadDialog.this, v);
                 dismiss();
             }
         });
